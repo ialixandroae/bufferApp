@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no" />
+    <title>Buffer Analysis App</title>
+    <link rel="stylesheet" href="https://js.arcgis.com/4.4/esri/css/main.css" />
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="https://s3-us-west-1.amazonaws.com/patterns.esri.com/files/calcite-web/1.0.0-rc.7/css/calcite-web.min.css">
+    <script src="dojoConfig.js"></script>
+    <script src="https://js.arcgis.com/4.4"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- header -->
+
+        <!-- banner -->
+        <div class="panel panel-black">
+            <div class="grid-container">
+                <div class="column-24">
+                    <!-- title needs to go in here, but be white and centered -->
+                    <h1 class="text-center">Buffer Analysis App</h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid-container">
+            <div class="column-24 leader-quarter">
+                <!-- Panou Stanga -->
+                <div class="column-4">
+                    <label>
+                        <p>Unitate de măsură(km)</p>
+                        <p>Interval 0 - 15</p>
+                        <input type="number" id="inputBufferValue" value="5" min="0" max="15" placeholder="Introduceti valoare" onchange="this.value = minmax(this.value, 1, 15)">
+                    </label>
+                    <label>
+                        <p>Total înregistrări identificate: </p>
+                        <p id="bufferedFeatures"></p>
+                    </label>
+                </div>
+
+                <!-- Panou Dreapta -->
+                <div class="column-16">
+                    <!-- map -->
+                    <div class="grid-container">
+                        <div class="column-24">
+                            <div id="mainDiv"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+</body>
+
+</html>
