@@ -4,7 +4,6 @@ body {
     margin: 0;
     height: 100%;
     width: 100%;
-    overflow: hidden;
 }
 
 #title {
@@ -17,7 +16,7 @@ body {
 }
 
 .bufLabel {
-    height: 100px;
+    height: 120px;
 }
 
 .esri-footer-brand-image {
