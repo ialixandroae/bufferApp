@@ -7,12 +7,30 @@ body {
     overflow: hidden;
 }
 
+#title {
+    margin: 0 1 1.55rem 0;
+}
+
 .column-18 {
     width: 1500px;
     max-width: 71.25vw;
 }
 
+.bufLabel {
+    height: 100px;
+}
+
+.esri-footer-brand-image {
+    fill: #fefefe;
+}
+
 #mainDiv {
-    height: 100vh;
+    height: 83vh;
     width: 86%;
+}
+
+#bufferedFeatures {
+    font-size: 30px;
+    font-weight: 100;
+    color: #0079c1;
 }

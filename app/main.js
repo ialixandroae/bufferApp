@@ -87,9 +87,17 @@ require([
                             // console.log(features.length);
                             mapView.graphics.addMany([bufferGraphic, ...features]);
                             document.getElementById('bufferedFeatures').innerHTML = features.length;
+                            mapView.goTo(bufferGraphic);
                         })
                         .otherwise(error => console.log("err", error));
                 }
             });
         });
+
+    var btnEmptySelection = document.getElementById('emptySelection');
+    btnEmptySelection.onclick = function() {
+        mapView.graphics.removeAll();
+        document.getElementById('bufferedFeatures').innerHTML = "";
+    };
+
 });
